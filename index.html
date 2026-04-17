@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMMS - Student Immersion Management and Monitoring System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Login Screen -->
+        <div id="loginScreen" class="screen">
+            <div class="login-container">
+                <div class="login-header">
+                    <h1>SIMMS</h1>
+                    <p>Student Immersion Management and Monitoring System</p>
+                </div>
+                <form id="loginForm" class="login-form">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" required placeholder="Enter your password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+                <div class="test-accounts">
+                    <h3>Test Accounts</h3>
+                    <p>admin@test.com / admin123</p>
+                    <p>student@test.com / student123</p>
+                    <p>faculty@test.com / faculty123</p>
+                    <p>agency@test.com / agency123</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Dashboard -->
+        <div id="dashboardScreen" class="screen hidden">
+            <nav class="navbar">
+                <div class="nav-brand">
+                    <h2>SIMMS</h2>
+                </div>
+                <div class="nav-menu" id="navMenu"></div>
+                <div class="nav-user">
+                    <span id="userDisplay"></span>
+                    <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+                </div>
+            </nav>
+            <div class="dashboard-container">
+                <aside class="sidebar" id="sidebar"></aside>
+                <main class="main-content" id="mainContent"></main>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="dashboard.js"></script>
+    <script src="admin.js"></script>
+    <script src="faculty.js"></script>
+    <script src="student.js"></script>
+    <script src="agency.js"></script>
+    <script src="reports.js"></script>
+    <script src="chat.js"></script>
+</body>
+</html>
